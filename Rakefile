@@ -15,8 +15,8 @@ Jeweler::Tasks.new do |gem|
   gem.name = "devise_restful_auth"
   gem.homepage = "http://github.com/saten/devise_restful_auth"
   gem.license = "MIT"
-  gem.summary = %Q{TODO: one-line summary of your gem}
-  gem.description = %Q{TODO: longer description of your gem}
+  gem.summary = %Q{\one-line summary of your gem}
+  gem.description = %Q{Longer description of your gem}
   gem.email = "saten.r@gmail.com"
   gem.authors = ["saten"]
   # Include your dependencies below. Runtime dependencies are required when using your gem,
