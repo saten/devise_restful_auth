@@ -5,12 +5,12 @@
 
 Gem::Specification.new do |s|
   s.name = %q{devise_restful_auth}
-  s.version = "0.0.0"
+  s.version = "0.1.0"
 
   s.required_rubygems_version = Gem::Requirement.new(">= 0") if s.respond_to? :required_rubygems_version=
   s.authors = ["saten"]
   s.date = %q{2010-11-24}
-  s.description = %q{TODO: longer description of your gem}
+  s.description = %q{longer description of your gem}
   s.email = %q{saten.r@gmail.com}
   s.extra_rdoc_files = [
     "LICENSE.txt",
@@ -24,6 +24,11 @@ Gem::Specification.new do |s|
     "README.rdoc",
     "Rakefile",
     "VERSION",
+    "devise_restful_auth.gemspec",
+    "lib/app/controllers/permissions_controller.rb",
+    "lib/app/controllers/subject_permissions_controller.rb",
+    "lib/app/models/permission.rb",
+    "lib/app/models/subject_permission.rb",
     "lib/devise_restful_auth.rb",
     "lib/devise_restful_auth/validate_auth.rb",
     "rails/init.rb",
@@ -33,7 +38,7 @@ Gem::Specification.new do |s|
   s.licenses = ["MIT"]
   s.require_paths = ["lib"]
   s.rubygems_version = %q{1.3.7}
-  s.summary = %q{TODO: one-line summary of your gem}
+  s.summary = %q{one-line summary of your gem}
   s.test_files = [
     "test/helper.rb"
   ]
