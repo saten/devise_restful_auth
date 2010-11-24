@@ -29,6 +29,7 @@ More info, a basic guide and something else should come soon.
     t.timestamp "updated_at"
   end
 
+You should provide yourself the models for the above migrations w/ routes. A scaffold is a good way at the present time.
 
 == Contributing to devise_restful_auth
  
