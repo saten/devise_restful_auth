@@ -88,8 +88,7 @@ module DeviseRestfulAuth
 	end
 	@role_ids||=[]
       end
-      
-      if "Permission".is_a? Class
+      if eval("Permission").is_a? Class
 	p=Permission.first(:conditions=>{:controller=>controller,:action=>action})
 	if p
 	  
