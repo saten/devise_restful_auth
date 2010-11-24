@@ -1,6 +1,14 @@
 = devise_restful_auth
 
-Description goes here.
+First, I'm sorry to have the wheel reinvented one more time.
+
+This gem should help developers who need fine grained control over authorization.
+
+Authorization is meant to be bound to a subject, usually the current_user, an object (which should be inferred from the controller) and a controller/action couple.
+
+Authorization info is stored in the Permission model. There is support for both role based and subject based authorization.
+
+More info, a basic guide and something else should come soon.
 
 == Contributing to devise_restful_auth
  
