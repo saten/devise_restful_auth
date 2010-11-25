@@ -111,7 +111,7 @@ module DeviseRestfulAuth
 	    end
 	  end
 	  
-	    @subject_permissions_on_items=SubjectPermission.all(:conditions=>{:item_type=>@item_type,:permission_id=>p.id,:subject_id=>@subject_id,:subject_type=>@subject_type})
+	    @subject_permissions_on_items=SubjectPermission.all(:conditions=>["(item_type=? or item_type='') and permission_id=? and subject_id=? and subject_type=?",@item_type,p.id,@subject_id,@subject_type])
 	  
 	  if !@subject_permissions_on_items.empty?
 	    @ups=@subject_permissions_on_items.find_all { |u| [nil,@item_id].include? u[:item_id]}
