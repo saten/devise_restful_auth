@@ -5,12 +5,12 @@
 
 Gem::Specification.new do |s|
   s.name = %q{devise_restful_auth}
-  s.version = "0.1.0"
+  s.version = "0.1.1"
 
   s.required_rubygems_version = Gem::Requirement.new(">= 0") if s.respond_to? :required_rubygems_version=
   s.authors = ["saten"]
-  s.date = %q{2010-11-24}
-  s.description = %q{longer description of your gem}
+  s.date = %q{2010-11-26}
+  s.description = %q{This gem provide a before_filter to check users against a permission class. it supports roles }
   s.email = %q{saten.r@gmail.com}
   s.extra_rdoc_files = [
     "LICENSE.txt",
@@ -38,7 +38,7 @@ Gem::Specification.new do |s|
   s.licenses = ["MIT"]
   s.require_paths = ["lib"]
   s.rubygems_version = %q{1.3.7}
-  s.summary = %q{one-line summary of your gem}
+  s.summary = %q{restful authorization for devise users.}
   s.test_files = [
     "test/helper.rb"
   ]
