@@ -20,8 +20,8 @@ module DeviseRestfulAuth
     #@subject_type serve per sapere chi è l'oggetto per il quale si cerca il permesso
     #se item o subject sono qualsiasi, si specifica 'any' nel controller e viene settato il valore nil per la ricerca sul db
     #se item e subject sono la stessa classe, la convenzione è di chiamare il model che mappa i ruoli come SubjectSubjectRole. verrà usata la chiave subject_id per il soggetto indipendentemente dalla classe. 
-    def validate_permissions
-      @subject_id=current_user.id if current_user
+    def validate_permissions(item_type=nil)
+      @item_type||=item_type if item_type
       controller= self.request.params[:controller]
       action= self.request.params[:action]
       if @item_type.nil?
@@ -43,6 +43,7 @@ module DeviseRestfulAuth
       end
       if @subject_type.nil?
 	@subject_type="User"
+        @subject_id=current_user.id if current_user
       elsif @subject_type.eql?'any'
 	@subject_type=nil
       end
