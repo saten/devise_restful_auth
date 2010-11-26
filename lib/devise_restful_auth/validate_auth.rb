@@ -95,7 +95,7 @@ module DeviseRestfulAuth
 	  
 	  @role_ids.each do |user_role|
 	    
-	    @role_permissions=SubjectPermission.all(:conditions=>{:subject_id=>user_role.role.id,:subject_type=>@role_type,:permission_id=>p.id,:item_type=>@item_type})
+	    @role_permissions=SubjectPermission.all(:conditions=>["subject_id=? and subject_type=? and permission_id=? and (item_type=? or item_type='')",user_role.role.id,@role_type,p.id,@item_type])
 	    if !@role_permissions.empty?
 	      
 	      @rps=@role_permissions.find_all { |rp| [nil,@item_id].include? rp[:item_id]}
