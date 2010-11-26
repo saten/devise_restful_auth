@@ -5,11 +5,11 @@
 
 Gem::Specification.new do |s|
   s.name = %q{devise_restful_auth}
-  s.version = "0.1.1"
+  s.version = "0.1.2"
 
   s.required_rubygems_version = Gem::Requirement.new(">= 0") if s.respond_to? :required_rubygems_version=
   s.authors = ["saten"]
-  s.date = %q{2010-11-26}
+  s.date = %q{2010-11-27}
   s.description = %q{This gem provide a before_filter to check users against a permission class. it supports roles }
   s.email = %q{saten.r@gmail.com}
   s.extra_rdoc_files = [
