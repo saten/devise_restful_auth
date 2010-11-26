@@ -106,8 +106,7 @@ module DeviseRestfulAuth
 	      
 	    end
 	    if !@rps.empty? 
-	      
-	      
+	     return 
 	    end
 	  end
 	  
@@ -117,7 +116,7 @@ module DeviseRestfulAuth
 	    @ups=@subject_permissions_on_items.find_all { |u| [nil,@item_id].include? u[:item_id]}
 	  end
 	  if @ups
-	    flash[:notice]="access granted because of #{@subject_type}:#{@subject_id} permission on #{@item_type}:#{@item_id} " and return
+	  	return
 	  else
 	    
 	    flash[:error]="accesso negato perché non esiste un permesso né per l'utente, né per il suo ruolo, su #{controller}/#{action} per #{@item_type}:#{@item_id}"
